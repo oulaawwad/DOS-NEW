@@ -26,11 +26,11 @@ class frontEndController extends Controller{
 		$num = rand(1,4);
 		if ($num < 3)
 		{
-		    // $url = 'http://192.168.12.141:8000/query/bookid/' . $id;
+		    $url = 'http://192.168.12.141:8000/query/bookid/' . $id;
 		}
 		else 
 		{
-			// $url = 'http://192.168.12.141:8001/query/bookid/' . $id;
+			$url = 'http://192.168.12.141:8001/query/bookid/' . $id;
 		}
 	   
 		// get book from catalogue

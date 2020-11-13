@@ -18,10 +18,9 @@ class catalogeController extends Controller
 	public function showBooks($topic){
 		$file = new \Illuminate\Filesystem\Filesystem();
 		$content = $file->get(__DIR__.'/../../books.txt');
-
 		$books = explode ("\n",$content);
 		if (sizeof($books) < 2){
-			return response()->json(['Message' => 'unfourtunatly There is no books.... try later']);
+			return response()->json([' ' => 'unfourtunatly There is no books.... try later']);
 		}
 
 		$book_desc;
