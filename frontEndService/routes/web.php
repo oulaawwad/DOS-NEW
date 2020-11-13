@@ -18,11 +18,11 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'search'] , function($router){
-	$router->get('{topic}','FrontendController@getAllBooks');
+	$router->get('{topic}','frontEndController@getAllBooks');
 });
 $router->group(['prefix' => 'lookup'] , function($router){
-	$router->get('{id}','FrontendController@getBook');
+	$router->get('{id}','frontEndController@getBook');
 });
 $router->group(['prefix' => 'buy'] , function($router){
-	$router->get('{id}','FrontendController@buyBook');
+	$router->get('{id}','frontEndController@buyBook');
 });

@@ -18,11 +18,11 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'query'], function($router){
-	$router->get('booktopic/{topic}','catalogueController@showBooks');
-	$router->get('bookid/{id}', 'catalogueController@showBook');
-	$router->get('check/{id}', 'catalogueController@find');
+	$router->get('booktopic/{topic}','catalogeController@showBooks');
+	$router->get('bookid/{id}', 'catalogeController@showBook');
+	$router->get('check/{id}', 'catalogeController@find');
 });
 
 $router->group(['prefix' => 'update'], function($router){
-	$router->get('buy/{id}', 'catalogueController@buyBook');
+	$router->get('buy/{id}', 'catalogeController@buyBook');
 });
