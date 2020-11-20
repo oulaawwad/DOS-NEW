@@ -23,6 +23,9 @@ $router->group(['prefix' => 'search'] , function($router){
 $router->group(['prefix' => 'lookup'] , function($router){
 	$router->get('{id}','frontEndController@getBook');
 });
+
+
+//  routes/ web file : This includes basic routing, routing parameters, named routes, 
 $router->group(['prefix' => 'buy'] , function($router){
 	$router->get('{id}','frontEndController@buyBook');
 });

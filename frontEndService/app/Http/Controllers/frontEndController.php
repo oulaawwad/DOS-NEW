@@ -44,8 +44,10 @@ class frontEndController extends Controller{
 
 
 
-	
+	//2- search
 	public function getAllBooks($item){
+
+		// make a query
 		$startQuery2 = microtime(true);	
 		if (Cache::has($item))
 		{	

@@ -16,17 +16,19 @@ class catalogeController extends Controller
 
 	// shoe the specific book
 	public function showBooks($topic){
+		// get the books information from text file with name books, its in cataloge folder
 		$file = new \Illuminate\Filesystem\Filesystem();
 		$content = $file->get(__DIR__.'/../../books.txt');
 		$books = explode ("\n",$content);
 		if (sizeof($books) < 2){
-			return response()->json([' ' => 'unfourtunatly There is no books.... try later']);
+			return response()->json([' ' => 'unfourtunatly there is no books.... try later']);
 		}
 
 		$book_desc;
 		$json_inf;
 		$flag = false;
 		$count = -1;
+		/// to display the books information
 		for ($i=0 ; $i<sizeof($books)-1 ; $i++){
 			$book_desc[$i] = explode(",",$books[$i]);
 			if ($book_desc[$i][3] == $topic){
